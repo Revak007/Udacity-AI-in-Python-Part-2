@@ -11,11 +11,18 @@ Feel free to skip the below part if you have already installed all packages from
     -	 Then, go to the Anaconda prompt and install necessary packages:
             `Conda install numpy, pandas, pytorch, matplotlib, pillow`
             -NOTE: pillow is so that you can later use PIL to open a PIL image
+	    
+## IMAGE DATASETS
+The flower images dataset used in this project is too big to include in this repo, but this program can be used with any image dataset. The data directory must consist of three sets- training data, validation data, and test data. Within each of these folders, there should be a number of folders labelled as per their contents (for example, a folder within the training folder that contains pictures of dandelions could be named '5' where '5' corresponds to 'dandelions').
+
+## JSON FILE
+The json file is required to convert the numerical labels of the folder to categorical labels (so for example, '5': 'dandelions', etc). This is because the classifier will output top-k class indices which will need to be converted into the numerical class labels, which will then need to be converted into categorical class labels.
 
 ## USAGE
 NOTE: For any paths required, make sure the folder is in the current/working directory. Example, the flowers directory is in the ImageClassifier folder which is the current directory so we can just do “python train.py flowers”
 
-1)	Training: 
+1)	**Training**: 
+
 The train_helper.py script consists of helper functions that are used to train the classifier in train.py. Thus, both train_helper and train.py are necessary parts. The command line takes multiple arguments, including dataset and hyperparameters:
 
 - First, the required arguments are:
@@ -33,7 +40,8 @@ The train_helper.py script consists of helper functions that are used to train t
 - Option 6 is if you would like to run this program on an external gpu (graphic processing unit). This is an option because this program is very large and has many nodes in input and hidden layer(s), so both time and memory are a concern on your computer’s cpu (central processing unit). However, if you do want to run it on an external gpu, you need to connect your computer to a gpu first. Default option is false/ on cpu.
 	 `python train.py data_directory_path --gpu true`
 
-2)	Prediction:
+2)	**Prediction**:
+
 The predict_helper.py script contains all the helper functions needed to predict the class of a given image in predict.py. Again, the command line takes multiple arguments:
 
 - First, the required arguments include both the path to the image we want to classify, and the path to the checkpoint with saved model features:
