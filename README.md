@@ -7,10 +7,10 @@ and use it to predict the class of an image. Python 3.7 is used here. Most of th
     `Git clone https://github.com/Revak007/Udacity-AI-in-Python-Part2.git`
     
 Feel free to skip the below part if you have already installed all packages from part 1, and also the pillow package
-    -	 Then to install Anaconda go to the following link, find your operating system, and follow the instructions: https://docs.anaconda.com/anaconda/install/
-    -	 Then, go to the Anaconda prompt and install necessary packages:
-            `Conda install numpy, pandas, pytorch, matplotlib, pillow`	    
-    -    NOTE: pillow is so that you can later use PIL to open a PIL image
+- Then to install Anaconda go to the following link, find your operating system, and follow the instructions: https://docs.anaconda.com/anaconda/install/
+- Then, go to the Anaconda prompt and install necessary packages:
+     `Conda install numpy, pandas, pytorch, matplotlib, pillow`	    
+- NOTE: pillow is so that you can later use PIL to open a PIL image
 	    
 ## IMAGE DATASETS
 The flower images dataset used in this project is too big to include in this repo, but this program can be used with any image dataset. The data directory must consist of three sets- training data, validation data, and test data. Within each of these folders, there should be a number of folders labelled as per their contents (for example, a folder within the training folder that contains pictures of dandelions could be named '5' where '5' corresponds to 'dandelions').
